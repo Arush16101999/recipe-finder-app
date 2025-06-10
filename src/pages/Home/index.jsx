@@ -38,37 +38,49 @@ const Home = () => {
 
   return (
     <>
-      <div>
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search for recipes..."
-        />
-        <button onClick={handleSearch}>Search</button>
-      </div>
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <br />
-      <RecipeList recipes={currentRecipes} />
-
-      <br />
-      {recipes.length > recipesPerPage && (
-        <div>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => setCurrentPage(page)}
-              style={{
-                margin: "0 5px",
-                backgroundColor: page === currentPage ? "blue" : "lightgray",
-              }}
-            >
-              {page}
-            </button>
-          ))}
+      <div className="p-4">
+        <div className="flex justify-center gap-2 mb-4">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search for recipes..."
+          />
+          <button
+            onClick={handleSearch}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            Search
+          </button>
         </div>
-      )}
+        {loading && <p>Loading...</p>}
+        {error && <p className="text-red-500">{error}</p>}
+        <br />
+        <RecipeList recipes={currentRecipes} />
+
+        <br />
+        {recipes.length > recipesPerPage && (
+          <div className="flex justify-center mt-4 gap-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                className={`px-3 py-1 rounded ${
+                  page === currentPage
+                    ? "bg-blue-500 text-white"
+                    : "bg-white border"
+                }`}
+                // style={{
+                //   margin: "0 5px",
+                //   backgroundColor: page === currentPage ? "blue" : "lightgray",
+                // }}
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
     </>
   );
 };

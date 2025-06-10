@@ -9,9 +9,14 @@ function App() {
   return (
     <>
       <div>
-        <nav>
-          <Link to="/">Recipe Finder</Link>
-          <Link to="/favorites">Favorites</Link>
+        <h1 className="text-2xl font-bold mb-4">Recipes Finder</h1>
+        <nav className="shadow p-4 flex justify-between">
+          <Link to="/" className="text-xl font-bold">
+            Recipe Finder
+          </Link>
+          <Link to="/favorites" className="text-xl font-bold">
+            Favorites
+          </Link>
         </nav>
         <Toaster position="bottom-right" reverseOrder={false} />
         <Routes>
