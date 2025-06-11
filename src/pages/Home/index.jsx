@@ -70,10 +70,6 @@ const Home = () => {
                     ? "bg-blue-500 text-white"
                     : "bg-white border"
                 }`}
-                // style={{
-                //   margin: "0 5px",
-                //   backgroundColor: page === currentPage ? "blue" : "lightgray",
-                // }}
               >
                 {page}
               </button>
