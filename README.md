@@ -1,23 +1,30 @@
-# Recipe Finder App (React) 
+![CI/CD](https://github.com/Arush16101999/recipe-finder-app/actions/workflows/deploy.yml/badge.svg)
+
+# Recipe Finder App (React)
+
 Application using React that allows users to search for recipes using a public API, view recipe details, and manage a list of favorite recipes.
 
 ### ReactVite
+
 - npm create vite@latest - this is not important if cloning the project
 - npm i & npm run dev
 
 # Deployed Link of Recipe Finder App
- https://arushan-recipe-finder.netlify.app/
+
+https://arushan-recipe-finder.netlify.app/
 
 # Features
+
 1. Search for recipes by name (based on letters)
 2. Fetch and display a list of recipes matching the search criteria from API
 3. Implemented pagination for long list search results
 4. Display detailed view based on ID
 5. Mark Favorite recipe and display in seperate section
 6. Persistence of favorite recipes with local storage
-7. add react toaster for favorit alert 
+7. add react toaster for favorit alert
 
 # Technologies
+
 - usestate, useEffect
 - react router (Route, Routes, useparams)
 - axios
