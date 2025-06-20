@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="text-2xl font-bold mb-4">Recipes Finder</h1>
+        <h1 className="text-2xl font-bold mb-4">Recipes Finder App</h1>
         <nav className="shadow p-4 flex justify-between">
           <Link to="/" className="text-xl font-bold">
-            Recipe Finder App
+            Recipe Finder
           </Link>
           <Link to="/favorites" className="text-xl font-bold">
             Favorites
